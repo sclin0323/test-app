@@ -38,17 +38,15 @@ public class RoleController {
 	public String urlPrefix;
 
 	@RequestMapping(value = "/read", method = RequestMethod.GET)
-
 	public List<Role> read(HttpServletRequest request) throws UnsupportedEncodingException, InstantiationException,
 			IllegalAccessException, NoSuchFieldException, SecurityException {
 
-		Pageable pageable = PageRequest.of(0, 100);
+		Pageable pageable = PageRequest.of(0, 250);
 		Page<Role> pages = roleService.findAll(pageable);
 		return pages.getContent();
 	}
 
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
-
 	public Role create(@RequestBody Role obj, Principal principal) {
 
 		Role o = roleService.create(obj);
