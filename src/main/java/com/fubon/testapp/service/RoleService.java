@@ -2,52 +2,24 @@ package com.fubon.testapp.service;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
-import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import com.fubon.testapp.entity.Role;
-import com.fubon.testapp.repository.RoleRepository;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+public interface RoleService {
 
-@Service
-public class RoleService {
-	
-	 private static final Logger log = LogManager.getLogger(RoleService.class);
-	
-	
-	@Autowired
-	RoleRepository roleRepository;
+	public Role create(Role obj);
 
-	
-	public List<Role> read() {
-		
-		List<Role> roles = roleRepository.findAll();
-		
-		for (Role o: roles) {
-			log.info("roleId:"+o.getRoleId());
-		}
-		
-		return roles;
-	}
-	
-	public Role create(Role o) {
-		
-		roleRepository.save(o);
-		
-		return o;
-	}
-	
-	public Role update(Role o) {
-		
-		return null;
-	}
-	
-	public Role delete(Role o) {
-		
-		return null;
-	}
+	public Role update(Role obj);
+
+	public Role delete(Role obj);
+
+	public Page<Role> findByExample(Example example, Pageable pageable);
+
+	public Page<Role> findAll(Pageable pageable);
+
+	public Role findByRoleId(String roleId);
 
 }

@@ -32,9 +32,8 @@ public class TestController {
 	@RequestMapping(value = "/read", method = RequestMethod.GET)
 	public List<Role> read(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
-		List<Role> roles = roleService.read();
 		
-		return roles;
+		return null;
 	}
 	/*
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
