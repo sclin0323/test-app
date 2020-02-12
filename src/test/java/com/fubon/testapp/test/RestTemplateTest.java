@@ -35,6 +35,7 @@ class RestTemplateTest {
 		for(Feature o : res.getFeatures()) {
 			log.info("Type: "+o.getType());
 			log.info("Id: "+o.getProperties().getId());
+			log.info("Coordinates: "+o.getGeometry().getCoordinates().get(0));
 		}
 		
 		
