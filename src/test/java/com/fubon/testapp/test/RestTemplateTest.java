@@ -22,6 +22,7 @@ class RestTemplateTest {
 
 	@Test
 	void test() {
+		/*
 		log.info("xxxxxxxxxxxxx");
 		
 		RestTemplate restTemplate = new RestTemplate();
@@ -50,6 +51,9 @@ class RestTemplateTest {
 //		
 //		log.info("Type: "+o.getType());
 //		log.info("Size: "+o.getFeatures().size());
+ * 
+ * */
+
 	}
 
 }
