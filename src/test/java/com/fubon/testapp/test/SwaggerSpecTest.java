@@ -31,6 +31,6 @@ public class SwaggerSpecTest {
         String swagger = this.restTemplate.getForObject("/v2/api-docs", String.class);
         log.info(swagger);
 
-        FileUtils.writeStringToFile(new File("target/swagger1.json"), swagger, StandardCharsets.UTF_8, false);
+        FileUtils.writeStringToFile(new File("target/swagger.json"), swagger, StandardCharsets.UTF_8, false);
     }
 }
