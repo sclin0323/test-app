@@ -6,6 +6,8 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
@@ -30,6 +32,7 @@ import com.fubon.testapp.service.RoleService;
 
 @RestController
 @RequestMapping(value = "/api/role")
+@Api(tags = "角色")
 public class RoleController {
 
 	@Autowired
@@ -37,6 +40,7 @@ public class RoleController {
 
 	public String urlPrefix;
 
+	@ApiOperation(value = "查詢角色", notes = "列出所有或特定角色")
 	@RequestMapping(value = "/read", method = RequestMethod.GET)
 	public List<Role> read(HttpServletRequest request) throws UnsupportedEncodingException, InstantiationException,
 			IllegalAccessException, NoSuchFieldException, SecurityException {

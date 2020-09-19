@@ -23,7 +23,7 @@ public class TestSchedule {
 
 	@Scheduled(fixedRate = 5000)
 	public void reportCurrentTime() {
-		log.info("The time is now {}", dateFormat.format(new Date()));
+		//log.info("The time is now {}", dateFormat.format(new Date()));
 		//log.info("Size: "+roleService.read().size());
 	}
 	

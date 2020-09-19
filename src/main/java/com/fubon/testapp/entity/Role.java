@@ -1,10 +1,13 @@
 package com.fubon.testapp.entity;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Data
 @Entity
 @Table(name="ROLE")
 public class Role {
@@ -15,24 +18,6 @@ public class Role {
 	
 	@Column(name="NAME")
 	private String name;
-	
-	
-
-	public String getRoleId() {
-		return roleId;
-	}
-
-	public void setRoleId(String roleId) {
-		this.roleId = roleId;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 	
 }
